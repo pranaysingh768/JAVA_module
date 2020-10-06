@@ -1,0 +1,27 @@
+package com.assignments_2;
+
+import java.io.*;
+
+public class Question64 {
+
+	public static void main(String[] args) throws Exception {  
+        String line;  
+        int count = 0;  
+          
+        //Opens a file in read mode  
+        FileReader file = new FileReader("D://CDAC//JAVA//CDAC//Java//TextSol//Assign1.txt");  
+        BufferedReader br = new BufferedReader(file);  
+              
+        //Gets each line till end of file is reached  
+        while((line = br.readLine()) != null) {  
+            //Splits each line into words  
+            String words[] = line.split(" ");  
+            //Counts each word  
+            count = count + words.length;  
+        }  
+          
+        System.out.println("Number of words present in given file: " + count);  
+        br.close();  
+    }  
+
+}
